@@ -1,6 +1,11 @@
 def find_even_values(src)
-  # Given an Array of Arrays of Integers ( [ [10, 11], [99, 50, 3, 4], [23, 41] ] ):
-  #
-  # Output all even values in each nested array
-
+  even_values = [] 
+  src.each do |array| 
+    array.each do |num|
+      if (num.even?) 
+        even_values.push(num)
+      end
+    end
+  end
+  even_values
 end
